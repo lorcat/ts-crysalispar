@@ -4,8 +4,8 @@ Probably you are aware of the problem of the instrumental files which contain th
 
 This Tango Server watches for changes in the file system uaing the predefined properties:
 
-    CalibFilePattern	"enst"
-    WatchPath	["/gpfs/current", "/gpfs/commissioning"]
+    CalibFilePattern	"enst"  - corresponds to a regular expression /^.*enst[^\/]+.par$/ for filename match
+    WatchPath	["/gpfs/current", "/gpfs/commissioning"] - indicates paths to watch for a) calibration, b) experimental data
 
 If the a .par file appears starting with __enst__, it is considered to be an instrumental calibration file, and its information is extracted.
 
